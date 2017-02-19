@@ -27,6 +27,9 @@ to remove a container:
 to remove an image:
 `docker rmi [image-id]` (use -f to force)
 
+remove all images and containers created by a `docker-compose up` command
+`docker-compose down -v --rmi all`
+
 
 ## Running it with Docker compose
 
