@@ -1,21 +1,23 @@
 version: '2'
 services:
   web:
-    build: ./frontEnd
+    build: ./frontend
     ports:
       - 8080:8080
     links:
       - api:localApi
     volumes:
-      - ./frontEnd:/usr/src/app
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
   api:
-    build: ./authApi
+    build: ./authapi
     ports:
       - 4001:4001
     links:
       - db:mongodb
     volumes:
-      - ./authApi:/usr/src/app
+      - ./authapi:/usr/src/app
+      - /usr/src/app/node_modules
   db:
     image: mongo
     volumes:
