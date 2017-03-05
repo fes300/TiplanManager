@@ -24,6 +24,7 @@ services:
     ports:
       - 5001:5001
     links:
+      - auth-api:authApi
       - dbTravels:mongodb
     volumes:
       - ./travelsdispenser:/usr/src/app
