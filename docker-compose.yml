@@ -5,20 +5,34 @@ services:
     ports:
       - 8080:8080
     links:
-      - api:localApi
+      - auth-api:localApi
+      - travels-api:travelsApi
     volumes:
       - ./frontend:/usr/src/app
       - /usr/src/app/node_modules
-  api:
+  auth-api:
     build: ./authapi
     ports:
       - 4001:4001
     links:
-      - db:mongodb
+      - dbAuth:mongodb
     volumes:
       - ./authapi:/usr/src/app
       - /usr/src/app/node_modules
-  db:
+  travels-api:
+    build: ./travelsdispenser
+    ports:
+      - 5001:5001
+    links:
+      - dbTravels:mongodb
+    volumes:
+      - ./travelsdispenser:/usr/src/app
+      - /usr/src/app/node_modules
+  dbAuth:
     image: mongo
     volumes:
-      - ./mongoData:/data/db
+      - ./mongoDataAuth:/data/db
+  dbTravels:
+    image: mongo
+    volumes:
+      - ./mongoDataTravels:/data/db
