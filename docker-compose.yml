@@ -1,17 +1,23 @@
 version: '2'
 services:
+
+# frontend app
   web:
     build: ./frontend
     ports:
       - 8080:8080
     links:
-      - auth-api:localApi
-      - travels-api:travelsApi
+      - auth-api:authapi
+      - travels-api:travelsapi
     volumes:
       - ./frontend:/usr/src/app
       - /usr/src/app/node_modules
+
+# auth api
   auth-api:
     build: ./authapi
+    expose:
+      - 4001
     ports:
       - 4001:4001
     links:
@@ -19,16 +25,22 @@ services:
     volumes:
       - ./authapi:/usr/src/app
       - /usr/src/app/node_modules
+
+# travel api
   travels-api:
     build: ./travelsdispenser
+    expose:
+      - 5001
     ports:
       - 5001:5001
     links:
-      - auth-api:authApi
+      - auth-api:authapi
       - dbTravels:mongodb
     volumes:
       - ./travelsdispenser:/usr/src/app
       - /usr/src/app/node_modules
+
+# databases
   dbAuth:
     image: mongo
     volumes:
