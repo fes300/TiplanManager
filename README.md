@@ -18,6 +18,8 @@ you need to have docker-compose installed. When you have it, just type `docker-c
 
 If you want to rebuild the image use `docker-compose up --build`.
 
+N.B.: if something goes wrong somewhere there's a chance that Docker cache will remain "dirty" and it could try to use images that don't exist anymore. If this happen just clean it up with `docker-compose down`.
+
 
 ## Useful Docker commands
 
