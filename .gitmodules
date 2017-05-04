@@ -1,0 +1,9 @@
+[submodule "submodules/travelsdispenser"]
+	path = submodules/travelsdispenser
+	url = git@bitbucket.org:fes300/travelsdispenser.git
+[submodule "submodules/frontend"]
+	path = submodules/frontend
+	url = git@bitbucket.org:fes300/frontend.git
+[submodule "submodules/authapi"]
+	path = submodules/authapi
+	url = git@bitbucket.org:fes300/authapi.git
