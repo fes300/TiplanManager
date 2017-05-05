@@ -28,7 +28,9 @@ If you want to rebuild the image use `docker-compose up --build`.
 
 
 **N.B.:** 
->if something goes wrong during the build process, there's a chance that Docker cache will remain "dirty" and it might try to use images that don't exist anymore. If this happen just clean it up with `docker-compose down`.
+>if something goes wrong during the build process, there's a chance that Docker cache will remain "dirty" and it might try to use images that don't exist anymore.
+
+>If this happen just clean it up with `docker-compose down`.
 
 
 ## Useful Docker commands
