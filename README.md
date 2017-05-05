@@ -7,9 +7,17 @@
 
 ## Getting the code
 
-Just clone the repository with `git clone git@bitbucket.org:fes300/tiplan-manager.git`
-init the submodules with `git submodule init`
-and lastly update the submodules with `git submodule update`.
+Just clone the repository with:
+
+`git clone git@bitbucket.org:fes300/tiplan-manager.git`
+
+init the submodules with:
+
+`git submodule init`
+
+and lastly update the submodules with:
+
+`git submodule update`.
 
 
 ## Running it with Docker compose
