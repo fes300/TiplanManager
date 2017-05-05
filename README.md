@@ -22,7 +22,7 @@ and lastly update the submodules with:
 
 ## Running it with Docker compose
 
-you need to have docker-compose installed. When you have it, just type `docker-compose up` from your terminal. it will do everything you need (use -d flag if you don't want to tail the logs of the containers).
+you need to have docker and docker-compose installed. When you have it, just type `docker-compose up` from your terminal. it will do everything you need (use -d flag if you don't want to tail the logs of the containers).
 
 If you want to rebuild the image use `docker-compose up --build`.
 
