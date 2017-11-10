@@ -1,9 +1,9 @@
 [submodule "submodules/travelsdispenser"]
 	path = submodules/travelsdispenser
-	url = git@github.com:fes300/TiplanFrontEnd.git
+	url = git@github.com:fes300/TiplanTravelDispenser.git
 [submodule "submodules/frontend"]
 	path = submodules/frontend
-	url = git@github.com:fes300/TiplanTravelDispenser.git
+	url = git@github.com:fes300/TiplanFrontEnd.git
 [submodule "submodules/authapi"]
 	path = submodules/authapi
 	url = git@github.com:fes300/TiplanAuth.git
